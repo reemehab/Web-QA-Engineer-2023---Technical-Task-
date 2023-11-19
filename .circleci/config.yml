@@ -3,12 +3,11 @@ version: 2.1
 jobs:
   test:
     docker:
-      - image: circleci/node:14
+      - image: circleci/node:16
     working_directory: /home/circleci/project
 
     steps:
       - checkout
-      
       - run:
           name: Install Dependencies
           command: npm install
