@@ -4,13 +4,13 @@ jobs:
   myStore-test :
     docker:
       - image: circleci/node:16
-    working_directory: /home/circleci/project
+    working_directory: /home/circleci/project/UI
 
     steps:
       - checkout
       - run:
           name: List Files in Working Directory
-          command: ls -la /home/circleci/project
+          command: ls -la /home/circleci/project/UI
       - run:
           name: Install Dependencies
           command: npm install
