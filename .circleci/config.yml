@@ -14,7 +14,7 @@ jobs:
       
       - run:
           name: Add SSH Key to Agent
-          command: ssh-add  ~/.ssh/project_key
+          command: ssh-add /home/circleci/.ssh/id_rsa
 
       - run:
           name: Install Dependencies
