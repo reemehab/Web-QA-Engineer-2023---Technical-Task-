@@ -1,29 +1,25 @@
+# This config is equivalent to both the '.circleci/extended/orb-free.yml'
+# and the base '.circleci/config.yml'
 version: 2.1
+orbs:
+  node: circleci/node@4.7
+  browser-tools: circleci/browser-tools@1.1.0
 
 jobs:
-  myStore-test:
+  test:
     docker:
-      - image: circleci/node:16
-    working_directory: /home/circleci/project
-
+      - image: cimg/node:lts-browsers
     steps:
       - checkout
-
+      - browser-tools/install-browser-tools
+      - node/install-packages
       - run:
-          name: List Files in Working Directory
-          command: ls -la /home/circleci/project
-
-      - run:
-          name: Install Dependencies
-          command: npm install
-          working_directory: /home/circleci/project/UI
-
-      - run:
-          name: Run Nightwatch Tests
-          command: npx nightwatch -c /home/circleci/project/UI/nightwatch.conf.js
+          name: Run npm test
+          command: npm run test
+      - store_test_results:
+          path: /tests_output
 
 workflows:
-  version: 2
-  build:
+  e2e-test:
     jobs:
-      - myStore-test
+      - test
