@@ -20,7 +20,7 @@ jobs:
 
       - run:
           name: Initialize Nightwatch (if needed)
-          command: npm init nightwatch
+          command: npm init nightwatch -y
           working_directory: /home/circleci/project/UI
 
       - run:
