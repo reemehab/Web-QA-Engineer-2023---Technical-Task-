@@ -15,6 +15,7 @@ jobs:
       - run:
           name: Install Dependencies
           command: npm install
+          command: npm init nightwatch
           working_directory: /home/circleci/project/UI
 
       - run:
