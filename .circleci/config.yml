@@ -1,6 +1,5 @@
-# This config is equivalent to both the '.circleci/extended/orb-free.yml'
-# and the base '.circleci/config.yml'
 version: 2.1
+
 orbs:
   node: circleci/node@4.7
   browser-tools: circleci/browser-tools@1.1.0
@@ -9,9 +8,11 @@ jobs:
   test:
     docker:
       - image: cimg/node:lts-browsers
+    working_directory: /home/circleci/project/UI
     steps:
       - checkout
-      - browser-tools/install-browser-tools
+      - browser-tools/install-browser-tools:
+          browsers: ["chrome"] 
       - node/install-packages
       - run:
           name: Run npm test
