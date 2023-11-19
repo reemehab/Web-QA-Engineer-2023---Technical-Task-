@@ -8,14 +8,7 @@ jobs:
 
     steps:
       - checkout
-      - run:
-          name: Start SSH Agent
-          command: eval "$(ssh-agent -s)"
       
-      - run:
-          name: Add SSH Key to Agent
-          command: ssh-add /home/circleci/.ssh/id_rsa
-
       - run:
           name: Install Dependencies
           command: npm install
