@@ -5,21 +5,29 @@ orbs:
   browser-tools: circleci/browser-tools@1.1.0
 
 jobs:
-  test:
+  myStore-test:
     docker:
-      - image: cimg/node:lts-browsers
-    working_directory: /home/circleci/project/UI
+      - image: circleci/node:16
+    working_directory: /home/circleci/project
+
     steps:
       - checkout
-      - browser-tools/install-browser-tools
-      - node/install-packages
+
       - run:
-          name: Run npm test
-          command: npm run test
-      - store_test_results:
-          path: /home/circleci/project/UI/tests_output
+          name: List Files in Working Directory
+          command: ls -la /home/circleci/project
+
+      - run:
+          name: Install Dependencies
+          command: npm install
+          working_directory: /home/circleci/project/UI
+
+      - run:
+          name: Run Nightwatch Tests
+          command: npx nightwatch 
 
 workflows:
-  e2e-test:
+  version: 2
+  build:
     jobs:
-      - test
+      - myStore-test
