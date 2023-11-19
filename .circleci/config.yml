@@ -8,11 +8,9 @@ jobs:
   test:
     docker:
       - image: cimg/node:lts-browsers
-    working_directory: /home/circleci/project/UI
     steps:
       - checkout
-      - browser-tools/install-browser-tools:
-          browsers: ["chrome"] 
+      - browser-tools/install-browser-tools
       - node/install-packages
       - run:
           name: Run npm test
