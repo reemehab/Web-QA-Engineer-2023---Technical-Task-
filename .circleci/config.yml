@@ -4,13 +4,13 @@ jobs:
   myStore-test:
     docker:
       - image: circleci/node:16
-    working_directory: /home/circleci/project/UI
+    working_directory: /home/circleci/project
 
     steps:
       - checkout
       - run:
           name: List Files in Working Directory
-          command: ls -la /home/circleci/project/UI
+          command: ls -la /home/circleci/project
 
       - run:
           name: Change to UI Directory
