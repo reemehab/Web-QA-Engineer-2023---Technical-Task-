@@ -2,7 +2,7 @@ version: 2.1
 
 jobs:
   ui_tests:
-    working_directory: /app/UI
+    working_directory: /Web-QA-Engineer-2023---Technical-Task-/UI
 
     steps:
       - checkout
@@ -20,7 +20,7 @@ jobs:
             npx nightwatch -e chrome
 
   api_tests:
-    working_directory: /app/APIS
+    working_directory: /Web-QA-Engineer-2023---Technical-Task-/APIS
 
     steps:
       - checkout
