@@ -16,3 +16,9 @@ jobs:
       - run:
           name: Run Nightwatch Tests
           command: npx nightwatch -e chrome
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - test
