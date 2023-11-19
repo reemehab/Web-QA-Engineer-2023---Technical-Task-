@@ -1,0 +1,6 @@
+npm i --save mock-user-auth
+npm install jsonwebtoken
+npm install --save-dev jest-html-reporter
+npm install --save-dev cross-env
+npm run dev
+npm test

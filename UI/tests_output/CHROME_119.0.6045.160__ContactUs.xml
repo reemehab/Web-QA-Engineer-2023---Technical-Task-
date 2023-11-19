@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="27">
+
+  <testsuite name="ContactUs"
+    errors="0" failures="0" hostname="" id="" package="ContactUs" skipped="0"
+    tests="27" time="617.3" timestamp="">
+  
+    <testcase name="all the fields are empty" classname="ContactUs" time="8.541" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Entering an email only" classname="ContactUs" time="12.47" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Entering Subject Heading only" classname="ContactUs" time="10.37" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Entering Order reference only" classname="ContactUs" time="10.21" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="attaching a file only" classname="ContactUs" time="12.18" assertions="5">
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Entering a message only" classname="ContactUs" time="4.262" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Entering an email and subject heading only" classname="ContactUs" time="12.53" assertions="5">
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Entering an email and Order reference only" classname="ContactUs" time="12.33" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Entering an email and attaching a file only" classname="ContactUs" time="12.67" assertions="5">
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Entering an email and a message  only" classname="ContactUs" time="10.12" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Entering a subject heading and order refrence only" classname="ContactUs" time="10.38" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Entering a subject heading and attaching a file only" classname="ContactUs" time="13.12" assertions="6">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Entering a subject heading and a message only" classname="ContactUs" time="11.54" assertions="5">
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Entering an order refrence and attaching a file only" classname="ContactUs" time="13.36" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Entering an order refrence and a message only" classname="ContactUs" time="10.24" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="attaching a file and a message only" classname="ContactUs" time="12.19" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="subject heading &amp; Email address &amp; order refrence" classname="ContactUs" time="10.40" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="subject heading &amp; Email address &amp; attach file" classname="ContactUs" time="12.45" assertions="6">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="subject heading &amp; Email address &amp; message" classname="ContactUs" time="11.30" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="subject heading &amp; order refrence &amp; attach file" classname="ContactUs" time="12.67" assertions="6">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="subject heading &amp; order refrence &amp;  message" classname="ContactUs" time="11.19" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="subject heading &amp; attach file &amp;  message" classname="ContactUs" time="12.66" assertions="6">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="email &amp; order &amp; attach a file" classname="ContactUs" time="12.54" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="email &amp; order &amp; message" classname="ContactUs" time="10.52" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="order &amp; attaching a file &amp; message" classname="ContactUs" time="12.59" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Filling All the fields with valid data" classname="ContactUs" time="13.37" assertions="5">
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Filling All the fields with invalid data" classname="ContactUs" time="12.44" assertions="6">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>
