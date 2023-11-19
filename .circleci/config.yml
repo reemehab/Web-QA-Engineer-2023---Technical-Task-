@@ -17,7 +17,10 @@ jobs:
           name: Install Dependencies
           command: npm install
           working_directory: /home/circleci/project/UI
-
+      - run:
+          name: Copy Nightwatch Configuration
+          command: cp ./UI/nightwatch.conf.js /home/circleci/project/UI
+          
       - run:
           name: Initialize Nightwatch (if needed)
           command: npm init nightwatch /home/circleci/project/UI/nightwatch.conf.js
