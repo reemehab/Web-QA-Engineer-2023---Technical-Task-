@@ -1,7 +1,7 @@
 version: 2.1
 
 jobs:
-  myStore-test :
+  myStore-test:
     docker:
       - image: circleci/node:16
     working_directory: /home/circleci/project/UI
@@ -11,6 +11,11 @@ jobs:
       - run:
           name: List Files in Working Directory
           command: ls -la /home/circleci/project/UI
+
+      - run:
+          name: Change to UI Directory
+          command: cd /home/circleci/project/UI
+
       - run:
           name: Install Dependencies
           command: npm install
