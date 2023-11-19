@@ -1,29 +1,42 @@
 version: 2.1
 
 jobs:
-  build:
+  ui_tests:
     docker:
-      - image: your-docker-image # Specify the Docker image with your project dependencies
-
-    working_directory: /app
+      - image: your-docker-image-for-ui # Specify the Docker image for UI tests
+    working_directory: /app/UI
 
     steps:
       - checkout
 
       - run:
-          name: Install Dependencies
+          name: Install UI Dependencies
           command: |
-            # Install project dependencies
+            # Install UI-specific dependencies
             npm install
 
       - run:
           name: Run UI Tests
           command: |
-            # Run your UI tests command
-             npx nightwatch -e chrome
+            # Run UI tests command
+            npx nightwatch -e chrome
+
+  api_tests:
+    docker:
+      - image: your-docker-image-for-apis # Specify the Docker image for API tests
+    working_directory: /app/APIS
+
+    steps:
+      - checkout
+
+      - run:
+          name: Install API Dependencies
+          command: |
+            # Install API-specific dependencies
+            npm install
 
       - run:
           name: Run API Tests
           command: |
-            # Run your API tests command
+            # Run API tests command
             npm test
