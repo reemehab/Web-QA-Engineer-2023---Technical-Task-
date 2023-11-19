@@ -8,6 +8,9 @@ jobs:
 
     steps:
       - checkout
+       - run:
+          name: List Files in Working Directory
+          command: ls -la /home/circleci/project
       - run:
           name: Install Dependencies
           command: npm install
