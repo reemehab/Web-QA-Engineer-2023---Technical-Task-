@@ -8,6 +8,7 @@ jobs:
   test:
     docker:
       - image: cimg/node:lts-browsers
+    working_directory: /home/circleci/project/UI
     steps:
       - checkout
       - browser-tools/install-browser-tools
@@ -16,7 +17,7 @@ jobs:
           name: Run npm test
           command: npm run test
       - store_test_results:
-          path: /tests_output
+          path: /home/circleci/project/UI/tests_output
 
 workflows:
   e2e-test:
