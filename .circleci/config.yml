@@ -2,9 +2,7 @@ version: 2.1
 
 jobs:
   ui_tests:
-    docker:
-      - image: your-docker-image-for-ui # Specify the Docker image for UI tests
-    working_directory: /app/UI
+    working_directory: ./UI
 
     steps:
       - checkout
@@ -22,9 +20,7 @@ jobs:
             npx nightwatch -e chrome
 
   api_tests:
-    docker:
-      - image: your-docker-image-for-apis # Specify the Docker image for API tests
-    working_directory: /app/APIS
+    working_directory: ./APIS
 
     steps:
       - checkout
@@ -40,3 +36,10 @@ jobs:
           command: |
             # Run API tests command
             npm test
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - ui_tests
+      - api_tests
