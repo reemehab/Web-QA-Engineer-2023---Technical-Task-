@@ -8,6 +8,7 @@ jobs:
 
     steps:
       - checkout
+
       - run:
           name: List Files in Working Directory
           command: ls -la /home/circleci/project
@@ -15,6 +16,10 @@ jobs:
       - run:
           name: Install Dependencies
           command: npm install
+          working_directory: /home/circleci/project/UI
+
+      - run:
+          name: Initialize Nightwatch (if needed)
           command: npm init nightwatch
           working_directory: /home/circleci/project/UI
 
