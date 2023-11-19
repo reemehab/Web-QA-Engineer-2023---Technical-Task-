@@ -23,17 +23,6 @@ module.exports ={
         .assert.containsText('.alert.alert-danger li', 'The message cannot be blank.')
         .end();
         },
-
-    "Entering Subject Heading only" :(browser) =>{
-       browser
-        .assert.containsText('#uniform-id_contact > span', '-- Choose --')
-        .click("#id_contact option[value='1']")
-        .assert.containsText('#uniform-id_contact > span', 'Webmaster')
-        .click('button#submitMessage')
-        .assert.containsText('.alert.alert-danger p', 'There is 1 error')
-        .assert.containsText('.alert.alert-danger li', 'Invalid email address.')
-        .end();
-    },
         
     "Entering Order reference only" :(browser) =>{
         browser.setValue('input#id_order', '1359')
@@ -44,6 +33,16 @@ module.exports ={
         .end();
     },
         
+    "Entering Subject Heading only" :(browser) =>{
+        browser
+         .assert.containsText('#uniform-id_contact > span', '-- Choose --')
+         .click("#id_contact option[value='1']")
+         .assert.containsText('#uniform-id_contact > span', 'Webmaster')
+         .click('button#submitMessage')
+         .assert.containsText('.alert.alert-danger p', 'There is 1 error')
+         .assert.containsText('.alert.alert-danger li', 'Invalid email address.')
+         .end();
+     },
     "attaching a file only" :(browser) =>{
     const filePath = 'D:\\siemens\\test.txt';
     browser.setValue('input[type="file"]', filePath)  
