@@ -13,16 +13,9 @@ jobs:
           command: ls -la /home/circleci/project
 
       - run:
-          name: Change to UI Directory
-          working_directory: /home/circleci/project/UI
-          
-      - run:
-          name: List Files in Working Directory
-          command: ls -la /home/circleci/project/UI
-
-      - run:
           name: Install Dependencies
           command: npm install
+          working_directory: /home/circleci/project/UI
 
       - run:
           name: Run Nightwatch Tests
