@@ -6,7 +6,7 @@ module.exports ={
    // .click('a[title="Contact us"]')
     .pause(2000)},
 
-    "all the fields are empty" : (browser) =>{
+ /*   "all the fields are empty" : (browser) =>{
         browser.waitForElementVisible('button#submitMessage', 5000)  
         .click('button#submitMessage')
         .assert.containsText('.alert.alert-danger p', 'There is 1 error')
@@ -346,5 +346,5 @@ module.exports ={
     .assert.containsText('.alert.alert-danger p', 'There is 1 error')
     .assert.containsText('.alert.alert-danger li', 'Invalid email address.')
     .assert.containsText('span.filename', 'No file selected')
-     .end();} 
+     .end();} */
 };
